@@ -69,3 +69,34 @@ header pre{
 .terminal_body::-webkit-scrollbar-thumb {
   background-color: #AEA79F;
 }
+
+.command{
+    display: block;
+    padding: 2px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.green{
+    color: lime;
+}
+
+.skyblue{
+    color: #00FFFF;
+}
+
+.command-input{
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    caret-color: white;
+}
+
+.command-input:focus{
+    border: none;
+    outline: none;
+}
