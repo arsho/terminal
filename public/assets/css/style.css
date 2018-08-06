@@ -100,3 +100,8 @@ header pre{
     border: none;
     outline: none;
 }
+
+table{
+    width: 75%;
+    margin: 2px 0;
+}
