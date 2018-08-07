@@ -5,11 +5,13 @@ class TableComponent extends Component{
     render(){
         return(
             <table>
+                <tbody>
                 {
                     this.props.rows.map((cells, index)=>{
                         return(<TableRow cells={cells} key={index}/>);
                     })
                 }
+                </tbody>
             </table>
         )
     }

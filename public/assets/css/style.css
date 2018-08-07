@@ -104,4 +104,5 @@ header pre{
 table{
     width: 75%;
     margin: 2px 0;
+    table-layout: fixed;
 }
