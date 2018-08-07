@@ -1,0 +1,52 @@
+{
+  "whoami":{
+    "description": "Dummy description for whoami",
+    "output": "Dummy output for whoami",
+    "format": "single_line"
+  },
+  "ls":{
+    "description": "Dummy description for whoami",
+    "output": "Dummy output for whoami",
+    "format": "single_line"
+  },
+  "pwd":{
+    "description": "Dummy description for whoami",
+    "output": "Dummy output for whoami",
+    "format": "single_line"
+  },
+  "help":{
+    "description": "Dummy description for whoami",
+    "output": "Dummy output for whoami",
+    "format": "single_line"
+  },
+  "man":{
+    "description": "Dummy description for whoami",
+    "output": "Dummy output for whoami",
+    "format": "single_line"
+  },
+  "clear":{
+    "description": "Dummy description for whoami",
+    "output": "Dummy output for whoami",
+    "format": "single_line"
+  },
+  "dir":{
+    "description": "Dummy description for whoami",
+    "output": "Dummy output for whoami",
+    "format": "single_line"
+  },
+  "changetheme":{
+    "description": "Dummy description for whoami",
+    "output": "Dummy output for whoami",
+    "format": "single_line"
+  },
+  "lsb_release":{
+    "description": "Dummy description for whoami",
+    "output": "Dummy output for whoami",
+    "format": "single_line"
+  },
+  "about":{
+    "description": "Dummy description for whoami",
+    "output": "Dummy output for whoami",
+    "format": "single_line"
+  }
+}
