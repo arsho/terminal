@@ -14,7 +14,7 @@
     "output": "Dummy output for whoami",
     "format": "single_line"
   },
-  "help":{
+  "echo":{
     "description": "Dummy description for whoami",
     "output": "Dummy output for whoami",
     "format": "single_line"
@@ -25,28 +25,29 @@
     "format": "single_line"
   },
   "clear":{
-    "description": "Dummy description for whoami",
-    "output": "Dummy output for whoami",
-    "format": "single_line"
+    "description": "Dummy description for clear",
+    "output": "",
+    "format": "command"
   },
   "dir":{
     "description": "Dummy description for whoami",
-    "output": "Dummy output for whoami",
-    "format": "single_line"
+    "output": [["help", "man", "clear"], ["changetheme", "ls", "dir"], ["whoami", "about", "pwd"]],
+    "format": "table"
   },
   "changetheme":{
-    "description": "Dummy description for whoami",
-    "output": "Dummy output for whoami",
-    "format": "single_line"
+    "description": "Change the theme of the terminal",
+    "output": "",
+    "format": "command"
   },
   "lsb_release":{
-    "description": "Dummy description for whoami",
-    "output": "Dummy output for whoami",
-    "format": "single_line"
+    "description": "Dummy description for lsb_release",
+    "output": [["Distributor ID:", "Ubuntu"], ["Description:", "Ubuntu 16.04.5 LTS"],
+      ["Release", "16.04"], ["Codename:", "xenial"]],
+    "format": "table"
   },
   "about":{
-    "description": "Dummy description for whoami",
-    "output": "Dummy output for whoami",
-    "format": "single_line"
+    "description": "Dummy description for about",
+    "output": "Dummy output for about",
+    "format": "multi_line"
   }
 }
