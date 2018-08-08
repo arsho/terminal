@@ -1,6 +1,8 @@
 Terminal
 ========
 
+![alt Terminal](screenshot/terminal.png)
+
 Web application that fascinated with terminal behavior.
  
 Proof of concept can be viewed in [https://datamate.github.io/](https://datamate.github.io/)
@@ -13,11 +15,15 @@ yarn install
 ```
 
 #### Run project
-Run using NPM
+- Run using yarn
+    ```bash
+    yarn start
+    ```
 
-```bash
-npm start
-```
+- Run using NPM
+    ```bash
+    npm start
+    ```
 
 #### Development Status
 

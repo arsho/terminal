@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CommandPrefix from './CommandPrefix';
 import TableComponent from './TableComponent';
+import MultiLineComponent from './MultiLineComponent';
 
 class Command extends Component{
 
@@ -14,10 +15,11 @@ class Command extends Component{
                     {this.props.command[2] === "table" &&
                     <TableComponent rows={this.props.command[1]}/>
                     }
-                    {this.props.command[2] !== "table" &&
-                    <p>
-                        {this.props.command[1]}
-                    </p>
+                    {this.props.command[2] === "single_line" &&
+                        <div>{this.props.command[1]}</div>
+                    }
+                    {this.props.command[2]=== "multi_line" &&
+                        <MultiLineComponent lines={this.props.command[1]}/>
                     }
                 </div>
             </div>

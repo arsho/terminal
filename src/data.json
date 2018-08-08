@@ -29,10 +29,11 @@
     "output": "",
     "format": "command"
   },
-  "dir":{
-    "description": "Dummy description for whoami",
-    "output": [["help", "man", "clear"], ["changetheme", "ls", "dir"], ["whoami", "about", "pwd"]],
-    "format": "table"
+  "help":{
+    "description": "Type help to see available commands",
+    "output": ["These shell commands are defined internally.  Type 'help' to see this list.",
+      "help", "man", "clear", "changetheme", "ls", "dir", "whoami", "about", "pwd"],
+    "format": "multi_line"
   },
   "changetheme":{
     "description": "Change the theme of the terminal",
@@ -47,7 +48,7 @@
   },
   "about":{
     "description": "Dummy description for about",
-    "output": "Dummy output for about",
+    "output": ["Dummy output for about"],
     "format": "multi_line"
   }
 }
