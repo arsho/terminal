@@ -49,3 +49,11 @@ export function get_help_output(){
     command_list.unshift("Available commands:");
     return command_list;
 }
+
+export function get_unknown_command_output(command){
+    return command + ": command not found";
+}
+
+export function get_initial_message() {
+    return "Type help to see the command list";
+}

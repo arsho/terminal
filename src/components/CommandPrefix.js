@@ -6,9 +6,8 @@ class CommandPrefix extends Component{
             <span>
                 <span className="green bold">
                     <i className="fa fa-long-arrow-right"></i>
-                    {/*<i className="fa fa-terminal"></i>*/}
                 </span>
-                <span className="skyblue bold"> terminal </span>
+                <span className="skyblue bold"> ~ </span>
             </span>
         );
     }

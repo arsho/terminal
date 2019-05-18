@@ -22,6 +22,7 @@ body{
 header{
     text-align: center;
 }
+
 header pre{
     display: inline-block;
     text-align: left;
@@ -67,7 +68,7 @@ header pre{
 }
 
 .terminal_body::-webkit-scrollbar-thumb {
-    background-color: #AEA79F;
+    background-color: #9d4100;
 }
 
 .command{

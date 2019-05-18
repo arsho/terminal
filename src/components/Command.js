@@ -3,23 +3,28 @@ import CommandPrefix from './CommandPrefix';
 import TableComponent from './TableComponent';
 import MultiLineComponent from './MultiLineComponent';
 
-class Command extends Component{
+class Command extends Component {
 
-    render(){
-        return(
+    render() {
+        const user_command = this.props.command[0];
+        const output_value = this.props.command[1];
+        const output_format = this.props.command[2];
+        return (
             <div>
+                {user_command !== "" &&
                 <div className="command">
-                    <CommandPrefix/> {this.props.command[0]}
+                    <CommandPrefix/> {user_command}
                 </div>
+                }
                 <div className="command">
-                    {this.props.command[2] === "table" &&
-                        <TableComponent rows={this.props.command[1]}/>
+                    {output_format === "table" &&
+                    <TableComponent rows={output_value}/>
                     }
-                    {this.props.command[2] === "single_line" &&
-                        <div>{this.props.command[1]}</div>
+                    {output_format === "single_line" &&
+                    <div>{output_value}</div>
                     }
-                    {this.props.command[2]=== "multi_line" &&
-                        <MultiLineComponent lines={this.props.command[1]}/>
+                    {output_format === "multi_line" &&
+                    <MultiLineComponent lines={output_value}/>
                     }
                 </div>
             </div>
