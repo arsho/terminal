@@ -20,20 +20,19 @@
     "format": "single_line"
   },
   "man":{
-    "description": "Dummy description for whoami",
-    "output": "Dummy output for whoami",
-    "format": "single_line"
+    "description": "Show manual of a given command",
+    "output": "",
+    "format": "command"
   },
   "clear":{
-    "description": "Dummy description for clear",
+    "description": "Clear the terminal screen",
     "output": "",
     "format": "command"
   },
   "help":{
     "description": "Type help to see available commands",
-    "output": ["These shell commands are defined internally.  Type 'help' to see this list.",
-      "help", "man", "clear", "changetheme", "ls", "dir", "whoami", "about", "pwd"],
-    "format": "multi_line"
+    "output": "",
+    "format": "command"
   },
   "changetheme":{
     "description": "Change the theme of the terminal",

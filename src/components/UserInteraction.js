@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PreviousCommands from './PreviousCommands';
 import CommandPrefix from './CommandPrefix';
 import data from '../data';
-import {get_terminal_output_data} from "../services/TerminalServices";
+import {get_terminal_output_data, get_command_list} from "../services/TerminalServices";
 
 class UserInteraction extends Component{
     constructor(props){
@@ -24,6 +24,7 @@ class UserInteraction extends Component{
                 if(key === user_value){
                     valid_command = true;
                     let format = value["format"];
+                    // Check if user enters output only command or action command
                     if(format!=="command"){
                         let new_terminal_output = get_terminal_output_data(user_value, value["output"], format);
                         this.setState({data: [...previous_data, new_terminal_output]});
@@ -31,6 +32,13 @@ class UserInteraction extends Component{
                     else{
                         if(key==="clear"){
                             this.setState({data: []});
+                        }
+                        else if(key==="help"){
+                            let command_list = get_command_list();
+                            command_list.unshift("Available commands:");
+                            let format = "multi_line";
+                            let current_command_output = get_terminal_output_data(user_value, command_list, format);
+                            this.setState({data: [...previous_data, current_command_output]});
                         }
                     }
                 }
