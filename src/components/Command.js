@@ -13,7 +13,7 @@ class Command extends Component{
                 </div>
                 <div className="command">
                     {this.props.command[2] === "table" &&
-                    <TableComponent rows={this.props.command[1]}/>
+                        <TableComponent rows={this.props.command[1]}/>
                     }
                     {this.props.command[2] === "single_line" &&
                         <div>{this.props.command[1]}</div>
@@ -23,7 +23,6 @@ class Command extends Component{
                     }
                 </div>
             </div>
-
         );
     }
 }
