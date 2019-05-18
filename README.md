@@ -24,10 +24,20 @@ yarn install
     ```bash
     npm start
     ```
+#### Create optimized production build
+- Build using yarn
+    ```bash
+    yarn build
+    ```
+
+- Build using NPM
+    ```bash
+    npm run build
+    ```
 
 #### Development Status
 
-2 - Pre-Alpha
+3 - Alpha
 
 #### Development Status Phases
 1. Planning
@@ -40,4 +50,4 @@ yarn install
 
 <hr>
 
-**Author**: [Ahmedur Rahman Shovon](https://arsho.github.io)
+**Author**: [Ahmedur Rahman Shovon](https://arshovon.com)
