@@ -7,6 +7,13 @@ yarn build # if using a npm, 'npm run build'
 
 # Go To Build folder
 cd build
+
+# Git init
+git init
+
+# Git add origin
+git remote add origin git@github.com:datamate/datamate.github.io.git
+
 # Add changes to git.
 git add --all
 

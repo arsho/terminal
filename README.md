@@ -35,6 +35,20 @@ yarn install
     npm run build
     ```
 
+#### Deployment
+- Update the production site git information in `deploy.sh`
+  ```
+  git remote add origin YOUR_GIT_ORIGIN_URL
+  ```
+- Change permission of the file `deploy.sh`:
+  ```
+  chmod 777 deploy.sh
+  ```
+- Deploy the site:
+  ```
+  ./deploy.sh
+  ```
+
 #### Development Status
 
 3 - Alpha
