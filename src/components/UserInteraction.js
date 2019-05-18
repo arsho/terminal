@@ -2,7 +2,10 @@ import React, {Component} from 'react';
 import PreviousCommands from './PreviousCommands';
 import CommandPrefix from './CommandPrefix';
 import data from '../data';
-import {get_terminal_output_data, get_command_list} from "../services/TerminalServices";
+import {get_terminal_output_data,
+    get_help_output,
+    get_man_output
+} from "../services/TerminalServices";
 
 class UserInteraction extends Component{
     constructor(props){
@@ -16,34 +19,40 @@ class UserInteraction extends Component{
 
     _handleKeyPress = (event) => {
         if(event.key === 'Enter'){
-            let user_value = event.target.value.toLowerCase();
+            let user_value = event.target.value;
             let previous_data = this.state.data;
             let valid_command = false;
-            for(let key in data){
-                let value = data[key];
-                if(key === user_value){
-                    valid_command = true;
-                    let format = value["format"];
-                    // Check if user enters output only command or action command
-                    if(format!=="command"){
-                        let new_terminal_output = get_terminal_output_data(user_value, value["output"], format);
-                        this.setState({data: [...previous_data, new_terminal_output]});
-                    }
-                    else{
-                        if(key==="clear"){
-                            this.setState({data: []});
+            if(user_value.startsWith("man")){
+                valid_command = true;
+                let man_output = get_man_output(user_value);
+                let current_command_output = get_terminal_output_data(user_value, man_output, "multi_line");
+                this.setState({data: [...previous_data, current_command_output]});
+            }
+            else{
+                for(let key in data){
+                    let value = data[key];
+                    if(key === user_value || user_value.startsWith("man")){
+                        valid_command = true;
+                        let format = value["format"];
+                        // Check if user enters output only command or action command
+                        if(format!=="command"){
+                            let new_terminal_output = get_terminal_output_data(user_value, value["output"], format);
+                            this.setState({data: [...previous_data, new_terminal_output]});
                         }
-                        else if(key==="help"){
-                            let command_list = get_command_list();
-                            command_list.unshift("Available commands:");
-                            let format = "multi_line";
-                            let current_command_output = get_terminal_output_data(user_value, command_list, format);
-                            this.setState({data: [...previous_data, current_command_output]});
+                        else{
+                            if(key==="clear"){
+                                this.setState({data: []});
+                            }
+                            else if(key==="help"){
+                                let help_output = get_help_output();
+                                let current_command_output = get_terminal_output_data(user_value, help_output, "multi_line");
+                                this.setState({data: [...previous_data, current_command_output]});
+                            }
                         }
                     }
                 }
-            }
 
+            }
 
             if(valid_command === false){
                 let terminal_output = user_value+": command not found";
