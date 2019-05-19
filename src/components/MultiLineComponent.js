@@ -6,7 +6,7 @@ class MultiLineComponent extends Component{
             <div>
                 {
                     this.props.lines.map((line, index)=>{
-                        return (<p key={index}>{line}</p>);
+                        return (<p key={index} dangerouslySetInnerHTML={{__html: line}}></p>);
                     })
                 }
             </div>

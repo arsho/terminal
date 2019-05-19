@@ -5,7 +5,7 @@ class TableRow extends Component{
         return(
             <tr>
                 {this.props.cells.map((cell, index)=>{
-                    return (<td key={index}>{cell}</td>);
+                    return (<td key={index} dangerouslySetInnerHTML={{__html: cell}}></td>);
                 })}
             </tr>
         )

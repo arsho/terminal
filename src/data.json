@@ -1,53 +1,74 @@
 {
-  "whoami":{
+  "whoami": {
+    "description": "Show the information of the developer",
+    "output": [
+      "I am Ahmedur Rahman Shovon.",
+      "To learn more about me visit <a title=\"Shovon's Portfolio\" href=\"https://arshovon.com\">arshovon.com</a>"
+    ],
+    "format": "multi_line"
+  },
+  "ls": {
     "description": "Dummy description for whoami",
     "output": "Dummy output for whoami",
     "format": "single_line"
   },
-  "ls":{
+  "pwd": {
     "description": "Dummy description for whoami",
     "output": "Dummy output for whoami",
     "format": "single_line"
   },
-  "pwd":{
+  "echo": {
     "description": "Dummy description for whoami",
     "output": "Dummy output for whoami",
     "format": "single_line"
   },
-  "echo":{
-    "description": "Dummy description for whoami",
-    "output": "Dummy output for whoami",
-    "format": "single_line"
-  },
-  "man":{
+  "man": {
     "description": "Show manual of a given command",
     "output": "",
     "format": "command"
   },
-  "clear":{
+  "clear": {
     "description": "Clear the terminal screen",
     "output": "",
     "format": "command"
   },
-  "help":{
+  "help": {
     "description": "Type help to see available commands",
     "output": "",
     "format": "command"
   },
-  "changetheme":{
+  "changetheme": {
     "description": "Change the theme of the terminal",
     "output": "",
     "format": "command"
   },
-  "lsb_release":{
+  "lsb_release": {
     "description": "Dummy description for lsb_release",
-    "output": [["Distributor ID:", "Ubuntu"], ["Description:", "Ubuntu 16.04.5 LTS"],
-      ["Release", "16.04"], ["Codename:", "xenial"]],
+    "output": [
+      [
+        "Distributor ID:",
+        "Ubuntu"
+      ],
+      [
+        "Description:",
+        "Ubuntu 16.04.5 LTS"
+      ],
+      [
+        "Release",
+        "16.04"
+      ],
+      [
+        "Codename:",
+        "xenial"
+      ]
+    ],
     "format": "table"
   },
-  "about":{
+  "about": {
     "description": "Dummy description for about",
-    "output": ["Dummy output for about"],
+    "output": [
+      "Dummy output for about"
+    ],
     "format": "multi_line"
   }
 }
