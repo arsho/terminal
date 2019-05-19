@@ -12,12 +12,10 @@ export function get_command_list(){
     return commands.sort();
 }
 
-export function get_command_description(command, prefix){
+export function get_command_description(command){
     for(let key in data){
         if(key === command){
-            let output = [prefix];
-            output.push(data[key]["description"]);
-            return output;
+            return data[key]["description"];
         }
     }
     return null;
@@ -37,9 +35,11 @@ export function get_man_output(user_input){
         let output_prefix = "Showing manual for "+searched_command+":";
         let command_desription = get_command_description(searched_command, output_prefix);
         if(command_desription){
-            return command_desription;
+            let output = [output_prefix];
+            output.push(command_desription);
+            return output;
         }
-        return [manual_not_found+splitted_inputs[1]];
+        return [manual_not_found+searched_command];
     }
     return [unknown_exception];
 }
@@ -55,5 +55,9 @@ export function get_unknown_command_output(command){
 }
 
 export function get_initial_message() {
+    const help_description = get_command_description("help");
+    if(help_description){
+        return help_description;
+    }
     return "Type help to see the command list";
 }
