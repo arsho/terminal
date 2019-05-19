@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import CommandPrefix from './CommandPrefix';
-import TableComponent from './TableComponent';
+import SingleLineComponent from './SingleLineComponent';
 import MultiLineComponent from './MultiLineComponent';
+import TableComponent from './TableComponent';
 
 class Command extends Component {
 
@@ -21,7 +22,7 @@ class Command extends Component {
                     <TableComponent rows={output_value}/>
                     }
                     {output_format === "single_line" &&
-                    <div>{output_value}</div>
+                    <SingleLineComponent line={output_value}/>
                     }
                     {output_format === "multi_line" &&
                     <MultiLineComponent lines={output_value}/>
