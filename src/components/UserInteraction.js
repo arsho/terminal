@@ -68,7 +68,7 @@ class UserInteraction extends Component {
             }
 
             if (valid_command === false) {
-                let terminal_output = get_unknown_command_output();
+                let terminal_output = get_unknown_command_output(user_value);
                 let current_command_output = get_terminal_output_data(user_value, terminal_output, "single_line");
                 this.setState({data: [...previous_data, current_command_output]});
             }

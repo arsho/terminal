@@ -11,12 +11,8 @@
 }
 
 body{
-    background-color: #250019;
     width: 100%;
-}
-
-.terminal{
-    color: white;
+    height: 100%;
 }
 
 header{
@@ -28,10 +24,13 @@ header pre{
     text-align: left;
 }
 
+.terminal{
+    width: 100%;
+    height: 100vh;
+}
+
 .terminal_header{
     padding: 5px;
-    background-color: #333;
-    color: #aea79f;
     border-top-left-radius: 4px;
     -o-border-top-left-radius: 4px;
     -webkit-border-top-left-radius: 4px;
@@ -67,10 +66,6 @@ header pre{
     width: 0.4em;
 }
 
-.terminal_body::-webkit-scrollbar-thumb {
-    background-color: #9d4100;
-}
-
 .command{
     display: block;
     padding: 2px;
@@ -80,21 +75,11 @@ header pre{
     font-weight: bold;
 }
 
-.green{
-    color: lime;
-}
-
-.skyblue{
-    color: #00FFFF;
-}
-
 .command-input{
     background: transparent;
     border: none;
-    color: white;
     outline: none;
     font-size: 16px;
-    caret-color: white;
 }
 
 .command-input:focus{
@@ -110,10 +95,42 @@ table{
 
 .terminal_body a{
     text-decoration: none;
-    color: white;
 }
 
 .terminal_body a:hover{
     cursor: pointer;
     text-decoration: underline;
+}
+
+/* Color code for Ubuntu Terminal */
+
+.ubuntu{
+    background-color: #250019;
+    color: white;
+}
+
+.ubuntu .terminal_header{
+    background-color: #333;
+    color: #aea79f;
+}
+
+.ubuntu .terminal_body::-webkit-scrollbar-thumb {
+    background-color: #9d4100;
+}
+
+.ubuntu .command-input{
+    color: white;
+    caret-color: white;
+}
+
+.ubuntu .terminal_body a{
+    color: white;
+}
+
+.ubuntu .command_prefix_icon{
+    color: lime;
+}
+
+.ubuntu .command_prefix_text{
+    color: #00FFFF;
 }

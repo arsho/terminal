@@ -4,10 +4,10 @@ class CommandPrefix extends Component{
     render(){
         return(
             <span>
-                <span className="green bold">
+                <span className="command_prefix_icon bold">
                     <i className="fa fa-long-arrow-right"></i>
                 </span>
-                <span className="skyblue bold"> ~ </span>
+                <span className="command_prefix_text bold"> ~ </span>
             </span>
         );
     }

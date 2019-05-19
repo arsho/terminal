@@ -5,7 +5,7 @@ import TerminaBody from './components/TerminalBody';
 class App extends Component {
     render() {
         return (
-            <div className="terminal">
+            <div className="ubuntu terminal">
                 <TerminalHeader/>
                 <TerminaBody/>
             </div>
