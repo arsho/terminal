@@ -4,32 +4,33 @@
 * Website: https://arshovon.com/
 */
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,500');
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: 'Ubuntu Mono', monospace;
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
 }
 
-header{
+header {
     text-align: center;
 }
 
-header pre{
+header pre {
     display: inline-block;
     text-align: left;
 }
 
-.terminal{
+.terminal {
     width: 100%;
     height: 100vh;
 }
 
-.terminal_header{
+.terminal_header {
     padding: 5px;
     border-top-left-radius: 4px;
     -o-border-top-left-radius: 4px;
@@ -43,11 +44,11 @@ header pre{
     font-size: 18px;
 }
 
-.terminal_header>.fa{
+.terminal_header > .fa {
     margin-right: 4px;
 }
 
-.terminal_body{
+.terminal_body {
     font-size: 16px;
     padding: 5px;
     border-bottom-left-radius: 4px;
@@ -66,50 +67,50 @@ header pre{
     width: 0.4em;
 }
 
-.command{
+.command {
     display: block;
     padding: 2px;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
 
-.command-input{
+.command-input {
     background: transparent;
     border: none;
     outline: none;
     font-size: 16px;
 }
 
-.command-input:focus{
+.command-input:focus {
     border: none;
     outline: none;
 }
 
-table{
+table {
     width: 60%;
     margin: 2px 0;
     table-layout: fixed;
 }
 
-.terminal_body a{
+.terminal_body a {
     text-decoration: none;
 }
 
-.terminal_body a:hover{
+.terminal_body a:hover {
     cursor: pointer;
     text-decoration: underline;
 }
 
-/* Color code for Ubuntu Terminal */
+/* Style for Ubuntu Terminal */
 
-.ubuntu{
+.ubuntu {
     background-color: #250019;
     color: white;
 }
 
-.ubuntu .terminal_header{
+.ubuntu .terminal_header {
     background-color: #333;
     color: #aea79f;
 }
@@ -118,19 +119,26 @@ table{
     background-color: #9d4100;
 }
 
-.ubuntu .command-input{
+.ubuntu .command-input {
     color: white;
     caret-color: white;
 }
 
-.ubuntu .terminal_body a{
+.ubuntu .terminal_body a {
     color: white;
 }
 
-.ubuntu .command_prefix_icon{
+.ubuntu .command_prefix_icon {
     color: lime;
 }
 
-.ubuntu .command_prefix_text{
+.ubuntu .command_prefix_text {
     color: #00FFFF;
+}
+
+/* Style for powershell */
+
+.powershell {
+    background-color: #1c647e;
+    color: white;
 }
