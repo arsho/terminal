@@ -42,10 +42,24 @@ header pre{
     -moz-border-top-right-radius: 4px;
     font-weight: bold;
     font-size: 18px;
+    text-align: center;
 }
 
-.terminal_header>.fa{
+.terminal_header .fa{
     margin-right: 4px;
+}
+
+.red-colored-icon{
+    color: #9d4100;
+}
+
+.gray-colored-icon{
+    color: gray;
+}
+
+
+.terminal_header .icons{
+    float: right;
 }
 
 .terminal_body{
